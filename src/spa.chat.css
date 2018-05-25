@@ -1,0 +1,195 @@
+/*
+ * spa.chat.css
+ * Chat feature styles
+*/
+
+.spa-chat {
+  position      : absolute;
+  bottom        : 5%;
+  right         : 0;
+  width         : 32em;
+  height        : 2em;
+  background    : #fff;
+  border-radius : 0.5em 0 0 0;
+  border-style  : solid;
+  border-width  : thin 0 0 thin;
+  border-color  : #888;
+  box-shadow    : 0 0 0.75em 0 #888;
+  z-index       : 1;
+}
+
+@keyframes open{
+   to{height: 18em}
+}
+
+@keyframes close{
+  to{height: 2em}
+}
+
+.spa-chat-animate-open{
+  animation-name: open;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.spa-chat-animate-close{
+  animation-name: close;
+  animation-duration: 200ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.spa-chat-head {
+
+  width: 100%;
+  height        : 2em;
+  line-height   : 1.8em;
+  border-bottom : thin solid #888;
+  cursor        : pointer;
+  background    : #888;
+  color         : white;
+  font-family   : arial, helvetica, sans-serif;
+  font-weight   : 800;
+  border-radius : 0.3em 0 0 0;
+}
+
+.spa-chat-closer {
+  text-align: right;
+  width: 5%;
+  float: left;
+}
+
+  .spa-chat-closer:hover {
+      background : #800;
+    }
+
+.spa-chat-head-toggle {
+  text-align: left;
+  width: 5%;
+  border-radius : 0.3em 0 0 0;
+  float: left;
+}
+
+.spa-chat-head-title {
+  text-align: center;
+  width: 85%;
+  float: left;
+}
+
+.spa-chat-sizer {
+  margin-top: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.spa-chat-list {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.spa-chat-msg {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.spa-chat-list-box {
+  margin: 2%;
+  height: 75%;
+  width: 96%;
+  overflow-y       : auto;
+  overflow-x : hidden;
+  border-width     : thin 0 thin thin;
+  border-style     : solid;
+  border-color     : #888;
+  background-color : #888;
+  color            : #ddd;
+  border-radius    : 0.5em 0 0 0;
+}
+
+.spa-chat-msg-log {
+  margin: 2%;
+  height: 60%;
+  width: 96%;
+  border     : thin solid #888;
+  overflow-y : scroll;
+  overflow-x : hidden;
+}
+
+.spa-chat-msg-log-msg {
+  background-color : #eee;
+}
+
+.spa-chat-msg-log-me {
+  font-weight : 800;
+  color       : #484;
+}
+
+.spa-chat-msg-log-alert {
+  font-style  : italic;
+  background  : #a88;
+  color       : #fff;
+}
+
+.spa-chat-list-name, .spa-chat-list-note {
+  width   : 100%;
+  padding : 0.1em 0.5em;
+}
+
+.spa-chat-list-name {
+  cursor : pointer;
+}
+  .spa-chat-list-name:hover {
+    background-color : #aaa;
+    color            : #888;
+  }
+  .spa-chat-list-name.spa-x-select {
+    background-color : #fff;
+    color            : #444;
+  }
+
+.spa-chat-msg-in {
+  height     : 2em;
+  bottom: 75%;
+  margin: 2%;
+  width: 96%;
+  border     : thin solid #888;
+  background : #888;
+}
+
+.spa-chat-msg-in input[type=text] {
+  width       : 75%;
+  height      : 100%;
+  line-height : 100%;
+  padding     : 0 0.5em;
+  border      : 0;
+  background  : #ddd;
+  color       : #666;
+  float: left;
+}
+  .spa-chat-msg-in input[type=text]:focus {
+    background : #ff8;
+    color      : #222;
+  }
+
+.spa-chat-msg-send {
+  width       : 25%;
+  height      : 100%;
+  line-height : 1.9em;
+  text-align  : center;
+  color       : #fff;
+  font-weight : 800;
+  cursor      : pointer;
+  float: left;
+}
+  .spa-chat-msg-send:hover,
+  .spa-chat-msg-send.spa-x-select {
+    background : #444;
+    color      : #ff0;
+  }
+
+.spa-chat-head:hover .spa-chat-head-toggle {
+  background : #aaa;
+}
