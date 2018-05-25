@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "tslint:recommended"   
+  ],
+  "jsRules": {},
+  "rules": {
+    "interface-name": [false, "always-prefix"],
+    "no-shadowed-variable": [false, {}],
+    "max-classes-per-file": [false, 100]
+  },
+  "rulesDirectory": []
+}
